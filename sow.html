@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Statement of Work - Brokerage Command Centre for Saffron Realty Channel Partners | Jarvis Daily</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: #1A2535; background: #fff; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+  .page { max-width: 900px; margin: 0 auto; padding: 40px; }
+
+  .header { background: linear-gradient(135deg, #C49A2A 0%, #A07D1C 100%); color: #fff; padding: 36px 40px; display: flex; justify-content: space-between; align-items: start; border-radius: 8px 8px 0 0; }
+  .header h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
+  .header .tagline { font-size: 13px; opacity: 0.9; margin-top: 2px; }
+  .header .doc-type { text-align: right; }
+  .header .doc-type h2 { font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+  .header .doc-type p { font-size: 12px; opacity: 0.9; margin-top: 3px; }
+
+  .section { margin: 2.5rem 0; }
+  .section-num { font-size: 11px; font-weight: 700; color: #C49A2A; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
+  .section h2 { font-size: 20px; font-weight: 800; margin-bottom: 12px; color: #1A2535; }
+  .section h3 { font-size: 16px; font-weight: 700; margin: 1.5rem 0 0.75rem; color: #1A2535; }
+  .section p, .section li { font-size: 14px; color: #4A5568; }
+  .section ul, .section ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+  .section li { margin-bottom: 4px; }
+
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 13px; }
+  thead { background: #FBF7EE; }
+  th { text-align: left; padding: 10px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #666; font-weight: 700; border-bottom: 2px solid #E8DCC4; }
+  td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; color: #4A5568; vertical-align: top; }
+  tbody tr:hover { background: #FDFAF3; }
+  .priority-high { color: #C49A2A; font-weight: 600; }
+  .priority-medium { color: #666; font-weight: 500; }
+
+  .milestone { background: #FDFAF3; border: 1px solid #E8DCC4; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; }
+  .milestone-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+  .milestone-title { font-size: 16px; font-weight: 700; color: #1A2535; }
+  .milestone-tag { background: #C49A2A; color: #fff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 4px; }
+  .milestone-meta { display: flex; gap: 2rem; font-size: 12px; color: #666; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #E8DCC4; flex-wrap: wrap; }
+  .milestone-meta strong { color: #C49A2A; }
+  .deliverables { list-style: none; padding: 0; }
+  .deliverables li { padding: 4px 0 4px 1.2rem; position: relative; font-size: 13px; color: #4A5568; }
+  .deliverables li::before { content: ''; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; background: #C49A2A; border-radius: 50%; }
+  .acceptance { background: #fff; border: 1px solid #E8DCC4; border-radius: 6px; padding: 1rem; margin-top: 1rem; }
+  .acceptance-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #999; margin-bottom: 8px; }
+  .acceptance li { font-size: 12px; color: #4A5568; padding: 3px 0; }
+
+  .payment-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+  .payment-card { background: #FDFAF3; border: 1px solid #E8DCC4; border-radius: 8px; padding: 1.1rem 0.9rem; text-align: center; }
+  .payment-card.active { border-color: #C49A2A; background: #FFF8E1; }
+  .payment-pct { font-size: 12px; font-weight: 700; color: #C49A2A; margin-bottom: 4px; }
+  .payment-amt { font-size: 20px; font-weight: 800; color: #1A2535; }
+  .payment-gst { font-size: 11px; color: #999; margin-top: 2px; }
+  .payment-when { font-size: 11px; color: #666; margin-top: 8px; line-height: 1.5; }
+
+  .timeline-bar { display: flex; gap: 4px; margin: 1rem 0; height: 32px; border-radius: 6px; overflow: hidden; }
+  .timeline-segment { display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #fff; letter-spacing: 0.5px; }
+  .seg-1 { background: #C49A2A; flex: 1; }
+  .seg-2 { background: #A07D1C; flex: 2; }
+  .seg-3 { background: #7D5F15; flex: 1; }
+  .seg-4 { background: #5A440F; flex: 3; }
+
+  .note-card { background: #F8FAFC; border-left: 3px solid #C49A2A; border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin: 1rem 0; }
+  .note-card strong { font-size: 13px; color: #1A2535; }
+  .note-card p { font-size: 13px; color: #4A5568; margin-top: 4px; }
+
+  .sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1.5rem 0; }
+  .sig-block { border: 1px solid #E8DCC4; border-radius: 8px; padding: 1.5rem; }
+  .sig-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #999; margin-bottom: 8px; }
+  .sig-name { font-size: 16px; font-weight: 700; color: #C49A2A; margin-bottom: 4px; }
+  .sig-detail { font-size: 12px; color: #666; line-height: 1.8; }
+  .sig-line { border-top: 1px solid #ccc; margin-top: 2rem; padding-top: 6px; font-size: 11px; color: #999; }
+
+  .ip-block { background: #FDFAF3; border: 1px solid #E8DCC4; border-radius: 8px; padding: 1.5rem; margin: 1rem 0; }
+  .ip-block h3 { color: #C49A2A; }
+  .ip-block p { margin-top: 0.5rem; font-size: 13.5px; }
+
+  .footer { text-align: center; padding: 2rem 0; font-size: 11px; color: #999; border-top: 1px solid #eee; margin-top: 2rem; }
+
+  @media print { body { padding: 0; } .page { padding: 20px; } .header { border-radius: 0; } }
+  @media (max-width: 600px) { .payment-grid { grid-template-columns: 1fr; } .sig-grid { grid-template-columns: 1fr; } .header { flex-direction: column; gap: 1rem; } .milestone-meta { flex-direction: column; gap: 0.5rem; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div>
+      <h1>Jarvis Daily</h1>
+      <div class="tagline">Tranquil Veda Private Limited - Pune, Maharashtra</div>
+    </div>
+    <div class="doc-type">
+      <h2>Statement of Work</h2>
+      <p>Brokerage Command Centre for Saffron Realty Channel Partners</p>
+      <p>SOW-SAF-001 Rev. 1 | 13 June 2026</p>
+    </div>
+  </div>
+
+  <!-- 1. PROJECT OVERVIEW -->
+  <div class="section">
+    <div class="section-num">Section 1</div>
+    <h2>Project Overview</h2>
+    <p>Jarvis Daily ("Service Provider", a unit of Tranquil Veda Private Limited, GSTIN 27AAHCT6956C1Z3, SAC 998314) will deploy a private, production-ready instance of the Brokerage Command Centre for Saffron Realty Channel Partners ("Client", Pune and Mumbai), configured around Saffron Realty's lead-source mix, channel-partner roster, builder relationships and brand. Through this engagement Saffron Realty will:</p>
+    <ul>
+      <li>Respond to every inbound lead from MagicBricks, 99acres, Housing.com, Meta lead-ads, and WhatsApp inbound within 60 seconds in the agent's voice, with budget, timeline and locality captured in the same turn</li>
+      <li>Route every qualified lead to the right channel-partner agent based on price band, micro-market and live capacity</li>
+      <li>Assemble premium-project listing brochures as cinematic mini-websites (RERA registration number auto-stamped, floor plans, price grid, virtual walkthrough link) in under 5 minutes</li>
+      <li>Run drip nurture flows that bring back leads gone cold and trigger missed-follow-up alerts before deals slip past the 7-day re-engagement window</li>
+      <li>Track channel-partner commissions with a transparent audit trail of every touchpoint, retiring the quarterly Excel argument</li>
+      <li>Capture post-site-visit intent signals via a Site-Visit Voice Drop, auto-tagged to the lead and lookable by the closing manager</li>
+      <li>Retain RERA disclosure compliance on every outbound brokerage communication, with the project's MahaRERA or RERA Pune registration number auto-attached</li>
+    </ul>
+    <p style="margin-top:0.75rem;">The system is hosted on managed infrastructure procured and maintained by Jarvis Daily on Saffron Realty's behalf. Build duration is <strong>8 calendar weeks from kickoff</strong> (5 build + 3 hypercare), followed by <strong>30 days of daily-check-in hypercare</strong> and a 12-month support retainer commencing per Section 5.5.</p>
+  </div>
+
+  <!-- 2. USER STORIES -->
+  <div class="section">
+    <div class="section-num">Section 2</div>
+    <h2>User Stories</h2>
+
+    <h3>Module 1: AI Lead Intake and Qualification</h3>
+    <table>
+      <thead><tr><th>ID</th><th>User Story</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td>US-01</td><td>As an <strong>inbound lead</strong>, I receive an AI WhatsApp reply in the assigned agent's voice within 60 seconds of submitting on MagicBricks, 99acres, Housing.com, Meta lead-ads or Saffron Realty's WhatsApp Business number.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-02</td><td>As an <strong>inbound lead</strong>, the AI captures my budget, timeline and preferred locality in 3 to 5 turns and proposes 2 to 3 matching projects from Saffron Realty's active inventory.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-03</td><td>As a <strong>closing manager</strong>, I see a lead-quality score (Hot / Warm / Cold) attached to every qualified lead based on budget fit, intent signals and source.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-04</td><td>As a <strong>channel-partner agent</strong>, I get a WhatsApp handover from the AI with the lead's qualified profile, suggested project shortlist, and a one-tap "call now" button.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-05</td><td>As a <strong>compliance reviewer</strong>, every outbound AI message that references a specific project automatically carries that project's MahaRERA or RERA Pune registration number.</td><td class="priority-high">High</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Module 2: Listing Brochure Engine</h3>
+    <table>
+      <thead><tr><th>ID</th><th>User Story</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td>US-06</td><td>As <strong>Saffron Realty ops</strong>, I can ingest a builder's project info pack (PDF, floor plans, images, RERA details, price grid) and have a cinematic mini-website ready in under 5 minutes per project per micro-market.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-07</td><td>As a <strong>channel-partner agent</strong>, I can share a unique listing-brochure URL per lead, with the lead's name and the agent's contact card baked in.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-08</td><td>As an <strong>admin</strong>, every listing brochure carries the project RERA registration number, the brokerage's AOA registration disclosure, and a one-click PDF export.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-09</td><td>As an <strong>admin</strong>, when a builder updates a price grid or RERA detail, the next brochure generation reflects the change within one hour.</td><td class="priority-medium">Medium</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Module 3: Nurture, Follow-Up and Site-Visit Capture</h3>
+    <table>
+      <thead><tr><th>ID</th><th>User Story</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td>US-10</td><td>As a <strong>channel-partner agent</strong>, leads with no activity for 5 days trigger a personalised AI follow-up draft for my review before sending.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-11</td><td>As an <strong>agent at site</strong>, I can speak into the phone after a showing ("hot, wants 3BHK Kalyani Nagar, ready to deposit in 7 days") and the audio is auto-transcribed, intent-tagged and attached to the lead before I leave the parking lot.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-12</td><td>As a <strong>closing manager</strong>, I see a daily missed-follow-up dashboard with leads at risk of crossing the 7-day cold threshold.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-13</td><td>As a <strong>marketing operator</strong>, I can launch a drip nurture flow for cold leads (one of 6 templates) and pause it instantly if the lead replies.</td><td class="priority-medium">Medium</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Module 4: Channel-Partner CRM, Commission Tracking and Admin</h3>
+    <table>
+      <thead><tr><th>ID</th><th>User Story</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td>US-14</td><td>As a <strong>founder</strong>, I see a transparent audit trail of which channel-partner touched which lead at what time, surfaced on the closure record.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-15</td><td>As a <strong>founder</strong>, commission splits between channel-partners are calculated from the lead's touchpoint history per pre-agreed split rules; no quarterly Excel reconciliation.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-16</td><td>As an <strong>admin</strong>, I can view, search and export every lead, every conversation, every commission record and every audit log entry in CSV or JSON format.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-17</td><td>As an <strong>admin</strong>, an automated weekly export of all leads, the active brochure library, commission records and the compliance log is delivered to Saffron Realty's Google Drive.</td><td class="priority-high">High</td></tr>
+        <tr><td>US-18</td><td>As a <strong>compliance reviewer</strong>, the RERA-disclosure audit log is immutable, append-only, and retained for 5 years.</td><td class="priority-high">High</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 3. DELIVERABLES BY MILESTONE -->
+  <div class="section">
+    <div class="section-num">Section 3</div>
+    <h2>Deliverables by Milestone</h2>
+
+    <div class="milestone">
+      <div class="milestone-header">
+        <div class="milestone-title">Kickoff and Foundation</div>
+        <div class="milestone-tag">Week 1</div>
+      </div>
+      <div class="milestone-meta">
+        <div>Phase payment: <strong>50% of setup at signature</strong></div>
+        <div>Duration: <strong>5 working days</strong></div>
+      </div>
+      <ul class="deliverables">
+        <li>Server provisioning, WhatsApp Business Cloud API setup, and a private staging URL for the Saffron Realty instance</li>
+        <li>Lead-source connectors to MagicBricks, 99acres, Housing.com and Meta lead-ads validated end-to-end</li>
+        <li>Channel-partner roster ingestion: 22 agents, 3 closing managers, 2 ops, with capacity rules and price-band coverage</li>
+        <li>Builder inventory ingestion: 18 builders with their active projects, RERA numbers, price grids and floor plans</li>
+        <li>Brand-system review: palette, typography, photography style, agent contact cards</li>
+      </ul>
+      <div class="acceptance">
+        <div class="acceptance-label">Acceptance Criteria</div>
+        <ul>
+          <li>All 4 lead-source connectors produce a test lead end-to-end within 90 seconds, in writing</li>
+          <li>All 22 channel-partner profiles, 3 closing managers and 2 ops profiles imported and confirmed</li>
+          <li>5 builder projects across 3 micro-markets imported with RERA numbers verified</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div class="milestone-header">
+        <div class="milestone-title">Build - Lead Engine, Brochure Engine and CRM</div>
+        <div class="milestone-tag">Weeks 2 to 6</div>
+      </div>
+      <div class="milestone-meta">
+        <div>Phase payment: <strong>25% at kickoff (Day 1, Week 1)</strong></div>
+        <div>Duration: <strong>5 calendar weeks</strong></div>
+      </div>
+      <ul class="deliverables">
+        <li>AI Lead Qualifier (US-01 to US-05) live across all 4 lead-source channels</li>
+        <li>Listing Brochure Engine (US-06 to US-09) generating cinematic mini-websites per project per micro-market</li>
+        <li>Nurture flows and missed-follow-up alerts (US-10 to US-13) configured for cold-after-5-days and cold-after-7-days</li>
+        <li>Site-Visit Voice Drop (US-11) with auto-transcribe and intent tagging</li>
+        <li>Channel-Partner CRM with lead handover, commission audit trail, capacity allocation</li>
+      </ul>
+      <div class="acceptance">
+        <div class="acceptance-label">Acceptance Criteria</div>
+        <ul>
+          <li>10 inbound leads handled end-to-end across all 4 sources during a one-day live test, with 0 missed in 60-second window</li>
+          <li>3 listing brochures generated in under 5 minutes each, RERA stamping verified</li>
+          <li>2 site-visit voice drops captured and intent-tagged within 5 minutes of the showing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div class="milestone-header">
+        <div class="milestone-title">Build - Commission Tracker, RERA Compliance and Reporting</div>
+        <div class="milestone-tag">Weeks 7 to 8</div>
+      </div>
+      <div class="milestone-meta">
+        <div>Phase payment: <strong>covered under signature + kickoff installments</strong></div>
+        <div>Duration: <strong>2 calendar weeks</strong></div>
+      </div>
+      <ul class="deliverables">
+        <li>Commission tracker (US-14, US-15) with audit-trail-driven splits per pre-agreed split rules</li>
+        <li>RERA disclosure auto-attach across all outbound communications (US-05)</li>
+        <li>Weekly automated Google Drive export pipeline (US-17)</li>
+        <li>Compliance log immutable, append-only, 5-year retention verified (US-18)</li>
+        <li>Closing-manager and founder dashboards with daily missed-follow-up view</li>
+      </ul>
+      <div class="acceptance">
+        <div class="acceptance-label">Acceptance Criteria</div>
+        <ul>
+          <li>3 historical closures recomputed via the new commission tracker match Saffron Realty's existing record within 1% variance</li>
+          <li>20 outbound messages reviewed for RERA stamping, 0 misses</li>
+          <li>1 weekly export delivered to Saffron Realty's Google Drive without manual intervention</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div class="milestone-header">
+        <div class="milestone-title">Hypercare, Pune and Mumbai Onsite</div>
+        <div class="milestone-tag">Weeks 9 to 13</div>
+      </div>
+      <div class="milestone-meta">
+        <div>Phase payment: <strong>final 25% on go-live</strong></div>
+        <div>Duration: <strong>30 days, includes 2 days Pune + 2 days Mumbai onsite</strong></div>
+      </div>
+      <ul class="deliverables">
+        <li>Hindi, Marathi and English screen-by-screen training videos delivered as a shared playlist</li>
+        <li>2-day onsite in Saffron Realty's Baner (Pune) office: agent-by-agent walkthrough, closing-manager dashboards</li>
+        <li>2-day onsite in Saffron Realty's Andheri West (Mumbai) office: agent-by-agent walkthrough, founder dashboards</li>
+        <li>Daily check-in for 30 days with Saffron Realty's nominated operations contact</li>
+        <li>L2 issue resolution with same-business-day acknowledgement and 48-hour fix SLA on Severity 1 issues</li>
+        <li>RERA compliance attestation: every outbound message sampled across 30 days carries the correct project registration number</li>
+      </ul>
+      <div class="acceptance">
+        <div class="acceptance-label">Acceptance Criteria</div>
+        <ul>
+          <li>Saffron Realty signs the Go-Live Acceptance Note after both onsites</li>
+          <li>4 consecutive weeks of automated Google Drive exports without manual intervention</li>
+          <li>Zero Severity 1 issues open at the end of the 30-day hypercare</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div class="milestone-header">
+        <div class="milestone-title">Steady-State Support Retainer</div>
+        <div class="milestone-tag">Month 1 onward</div>
+      </div>
+      <div class="milestone-meta">
+        <div>Recurring: <strong>&#8377;24,000 / month + 18% GST</strong></div>
+        <div>Commences per Section 5.5</div>
+      </div>
+      <ul class="deliverables">
+        <li>Hosting on managed cloud infrastructure procured by Jarvis Daily on Saffron Realty's behalf</li>
+        <li>AI model API budget covering up to 600 lead conversations per month and unlimited brochure generations within fair-use</li>
+        <li>L2 incident response: Severity 1 within 4 business hours, Severity 2 within 1 business day</li>
+        <li>Quarterly feature upkeep window (20 hours of engineering time, rolled into the quarter; cumulative unused hours expire at quarter end)</li>
+        <li>Lead-source connector maintenance: MagicBricks, 99acres, Housing.com, Meta lead-ads API changes covered in retainer</li>
+        <li>RERA compliance attestation issued every 6 months</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 4. TIMELINE -->
+  <div class="section">
+    <div class="section-num">Section 4</div>
+    <h2>Timeline</h2>
+    <p>Total build duration is <strong>11 to 13 calendar weeks</strong> from kickoff to go-live, plus a 30-day hypercare window before steady-state retainer commences. Indicative breakdown below.</p>
+    <div class="timeline-bar">
+      <div class="timeline-segment seg-1">W1 KICKOFF</div>
+      <div class="timeline-segment seg-2">W2 - 6 BUILD A</div>
+      <div class="timeline-segment seg-3">W7 - 8 BUILD B</div>
+      <div class="timeline-segment seg-4">W9 - 13 HYPERCARE</div>
+    </div>
+    <p style="font-size: 12px; color: #666; margin-top: 0.5rem;">Build A: Lead Engine + Brochure Engine + CRM + Nurture + Site-Visit Voice Drop. Build B: Commission Tracker + RERA Compliance auto-attach + Reporting Dashboards.</p>
+    <div class="note-card">
+      <strong>Calendar anchor.</strong>
+      <p>Build duration is anchored to the kickoff date (counted in calendar weeks). Where Saffron Realty's sign-offs, content delivery or credential handovers run past schedule, any continuing build work is carried out under the Change Request Process in Section 11. Where the extension is attributable to Jarvis Daily or to Force Majeure under Section 11, the go-live date moves on a day-for-day basis.</p>
+    </div>
+  </div>
+
+  <!-- 5. INVESTMENT AND PAYMENT SCHEDULE -->
+  <div class="section">
+    <div class="section-num">Section 5</div>
+    <h2>Investment and Payment Schedule</h2>
+
+    <h3>5.1 Setup Investment</h3>
+    <p>Brokerage Command Centre (full build): <strong>&#8377;7,50,000 + 18% GST</strong> (one-time). Inclusive of all training videos, the 2-day Pune + 2-day Mumbai onsite, and the 30-day hypercare. Where Saffron Realty's books prefer a single capex line, the Command Centre Prepaid option is <strong>&#8377;9,20,000 + 18% GST</strong> (one-time) covering setup and the first 12 months of retainer; Year 2 renewal at <strong>&#8377;2,60,000 / year + 18% GST</strong> as Compliance, Hosting and Continuity.</p>
+
+    <h3>5.2 Setup Line-Item Breakdown</h3>
+    <table>
+      <thead><tr><th>Line Item</th><th style="text-align: right;">Amount (INR)</th></tr></thead>
+      <tbody>
+        <tr><td>Discovery, design system, and RERA-compliance audit spine</td><td style="text-align: right;">1,50,000</td></tr>
+        <tr><td>Lead Engine + Listing Brochure Engine + Channel-Partner CRM (full build)</td><td style="text-align: right;">3,80,000</td></tr>
+        <tr><td>WhatsApp team surface + commission tracker + Site-Visit Voice Drop</td><td style="text-align: right;">1,40,000</td></tr>
+        <tr><td>Hindi/Marathi/English training videos + 30-day hypercare + Pune and Mumbai onsite</td><td style="text-align: right;">80,000</td></tr>
+        <tr style="background:#FBF7EE; font-weight: 700;"><td>Setup Total</td><td style="text-align: right;">7,50,000</td></tr>
+      </tbody>
+    </table>
+
+    <h3>5.3 Payment Schedule (Brokerage Command Centre)</h3>
+    <div class="payment-grid">
+      <div class="payment-card active">
+        <div class="payment-pct">50%</div>
+        <div class="payment-amt">&#8377;3,75,000</div>
+        <div class="payment-gst">+ 18% GST</div>
+        <div class="payment-when">On signature of this SOW</div>
+      </div>
+      <div class="payment-card">
+        <div class="payment-pct">25%</div>
+        <div class="payment-amt">&#8377;1,87,500</div>
+        <div class="payment-gst">+ 18% GST</div>
+        <div class="payment-when">On kickoff (Day 1, Week 1)</div>
+      </div>
+      <div class="payment-card">
+        <div class="payment-pct">25%</div>
+        <div class="payment-amt">&#8377;1,87,500</div>
+        <div class="payment-gst">+ 18% GST</div>
+        <div class="payment-when">On go-live (end of hypercare)</div>
+      </div>
+      <div class="payment-card">
+        <div class="payment-pct">RETAINER</div>
+        <div class="payment-amt">&#8377;24,000 / mo</div>
+        <div class="payment-gst">+ 18% GST</div>
+        <div class="payment-when">Commences per Section 5.5</div>
+      </div>
+    </div>
+    <p style="font-size: 12px; color: #666;">Payment schedule sum (50% + 25% + 25%) = &#8377;7,50,000, matching Section 5.1.</p>
+
+    <h3>5.4 Command Centre Prepaid Payment Schedule</h3>
+    <div class="payment-grid">
+      <div class="payment-card active">
+        <div class="payment-pct">50%</div>
+        <div class="payment-amt">&#8377;4,60,000</div>
+        <div class="payment-gst">+ 18% GST</div>
+        <div class="payment-when">On signature of this SOW</div>
+      </div>
+      <div class="payment-card">
+        <div class="payment-pct">50%</div>
+        <div class="payment-amt">&#8377;4,60,000</div>
+        <div class="payment-gst">+ 18% GST</div>
+        <div class="payment-when">On kickoff (Day 1, Week 1)</div>
+      </div>
+      <div class="payment-card">
+        <div class="payment-pct">RETAINER</div>
+        <div class="payment-amt">Bundled</div>
+        <div class="payment-gst">Year 1</div>
+        <div class="payment-when">No monthly invoice for 12 months from go-live</div>
+      </div>
+      <div class="payment-card">
+        <div class="payment-pct">Y2</div>
+        <div class="payment-amt">&#8377;2,60,000 / yr</div>
+        <div class="payment-gst">+ 18% GST</div>
+        <div class="payment-when">Compliance, Hosting and Continuity, year 2 onward</div>
+      </div>
+    </div>
+    <p style="font-size: 12px; color: #666;">Payment schedule sum (50% + 50%) = &#8377;9,20,000, matching Section 5.1 Prepaid figure.</p>
+
+    <h3>5.5 Retainer Commencement</h3>
+    <p>The monthly retainer commences on the earlier of (a) the calendar month in which go-live or final handover is achieved, or (b) the calendar month falling 12 weeks after the kickoff date. This dual-trigger is standard for managed-platform engagements and gives both sides a clear, calendar-anchored start to the steady-state support cycle. Where joint readiness checkpoints, configuration handovers, or sign-off cycles run past date (b), any continuing build work is carried out under the Change Request Process in Section 11 and date (b) remains the retainer-start date. Where the extension is attributable to Jarvis Daily or to Force Majeure under Section 11, date (b) moves on a day-for-day basis.</p>
+  </div>
+
+  <!-- 6. SLAs and SUPPORT -->
+  <div class="section">
+    <div class="section-num">Section 6</div>
+    <h2>SLAs and Support</h2>
+    <table>
+      <thead><tr><th>Severity</th><th>Definition</th><th>Acknowledgement</th><th>Resolution Target</th></tr></thead>
+      <tbody>
+        <tr><td><strong>S1 (Critical)</strong></td><td>System fully unavailable; no leads received, no brochures sent, RERA disclosures missing</td><td>1 business hour</td><td>4 business hours</td></tr>
+        <tr><td><strong>S2 (High)</strong></td><td>A core module unavailable but workaround exists; degraded performance on multiple workflows</td><td>2 business hours</td><td>1 business day</td></tr>
+        <tr><td><strong>S3 (Medium)</strong></td><td>Minor feature broken; single-workflow degradation; non-blocking</td><td>1 business day</td><td>5 business days</td></tr>
+        <tr><td><strong>S4 (Low)</strong></td><td>Cosmetic or enhancement request</td><td>2 business days</td><td>Quarterly cycle</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 12px; color: #666; margin-top: 0.5rem;">Business hours are 09:30 to 18:30 IST, Monday to Saturday excluding declared Indian public holidays. Severity classification is at Jarvis Daily's reasonable judgement; the Client may escalate to the named SOW signer for re-classification.</p>
+  </div>
+
+  <!-- 7. COMPLIANCE REPRESENTATION -->
+  <div class="section">
+    <div class="section-num">Section 7</div>
+    <h2>Compliance Representation</h2>
+    <p>Saffron Realty is responsible for the legality, taxation correctness and brokerage standards of every communication sent through the system. Jarvis Daily is a software vendor and does not assume regulatory liability for the brokerage advice or transactions contained within client interactions.</p>
+    <ul>
+      <li><strong>RERA disclosure.</strong> The Brokerage Command Centre maintains an immutable RERA-disclosure audit log of every outbound communication that references a specific project, retained for 5 years. Saffron Realty's MahaRERA and RERA Pune broker registration numbers, along with each builder project's RERA registration, are recorded as configuration and auto-stamped on the relevant messages and brochures.</li>
+      <li><strong>DPDP Act 2023.</strong> Inbound leads are treated as Data Principals. Consent text on the AI Lead Qualifier flow is reviewed against the Digital Personal Data Protection Act 2023. The system supports access, correction and erasure requests via the admin panel.</li>
+      <li><strong>GST and SAC.</strong> Jarvis Daily invoices Saffron Realty under SAC 998314 (IT consulting and software services). Saffron Realty's CA remains the final authority on tax classification.</li>
+      <li><strong>IT Act 2000.</strong> Digital signatures collected through the platform are legally valid under Section 5 of the Information Technology Act 2000 and its 2008 amendment.</li>
+    </ul>
+  </div>
+
+  <!-- 8. SOFTWARE VENDOR FRAMING -->
+  <div class="section">
+    <div class="section-num">Section 8</div>
+    <h2>Software Vendor Framing</h2>
+    <p>Jarvis Daily provides software-as-a-service and configuration services. Jarvis Daily is not a regulated entity under the Real Estate (Regulation and Development) Act 2016 or under any associated state-level rules. Saffron Realty retains full and sole responsibility for the brokerage advice, project recommendations, price-grid accuracy, commission disclosures and signing-broker representations made through any artifact produced via the Brokerage Command Centre.</p>
+  </div>
+
+  <!-- 9. INDEMNIFICATION -->
+  <div class="section">
+    <div class="section-num">Section 9</div>
+    <h2>Indemnification</h2>
+    <p>Each party shall indemnify the other against third-party claims arising directly from its own gross negligence, wilful misconduct or breach of this SOW. Saffron Realty shall indemnify Jarvis Daily against claims arising from the substance of brokerage advice, RERA compliance, builder representations, commission disputes or any regulatory action against Saffron Realty under RERA or any successor regime. Jarvis Daily shall indemnify Saffron Realty against claims arising from infringement by the Platform of third-party intellectual property rights.</p>
+  </div>
+
+  <!-- 10. LIABILITY CAP -->
+  <div class="section">
+    <div class="section-num">Section 10</div>
+    <h2>Liability Cap</h2>
+    <p>To the maximum extent permitted by applicable Indian law, the aggregate liability of either party arising out of or related to this SOW shall be limited to the fees actually paid by Saffron Realty to Jarvis Daily in the six (6) months immediately preceding the event giving rise to the claim. Neither party shall be liable for any indirect, consequential, incidental, punitive, special or exemplary damages, lost profits, lost revenue, or business interruption. This cap does not apply to liabilities arising under Section 9 (Indemnification) or to a party's confidentiality obligations.</p>
+  </div>
+
+  <!-- 11. TERMINATION AND CHANGE REQUESTS -->
+  <div class="section">
+    <div class="section-num">Section 11</div>
+    <h2>Termination, Change Requests and Force Majeure</h2>
+    <h3>11.1 Termination for Convenience</h3>
+    <p>Either party may terminate this SOW with thirty (30) days' written notice. On termination, Saffron Realty shall pay for all work completed up to the date of termination and Jarvis Daily shall deliver a final data export within 7 business days.</p>
+    <h3>11.2 Change Request Process</h3>
+    <p>Any out-of-scope work is documented in a written change request, sized in engineering hours by Jarvis Daily, and signed off by Saffron Realty's nominated authoriser before work begins. Change requests are billed at <strong>&#8377;3,500 per engineering hour + 18% GST</strong>.</p>
+    <h3>11.3 Force Majeure</h3>
+    <p>Neither party shall be liable for delays caused by acts of God, war, terrorism, civil unrest, government action, pandemic, or other events beyond reasonable control. Where Force Majeure extends the build, the retainer-commencement backstop date in Section 5.5 moves on a day-for-day basis.</p>
+  </div>
+
+  <!-- 12. CONFIDENTIALITY -->
+  <div class="section">
+    <div class="section-num">Section 12</div>
+    <h2>Confidentiality</h2>
+    <p>Each party shall treat the other party's non-public information as confidential and shall use such information solely for the purposes of this SOW. Saffron Realty's lead lists, channel-partner roster, builder inventory, commission rules and conversation transcripts are treated as Highly Confidential. Jarvis Daily's source code, system prompts, agent architectures and workflow specifications are treated as Highly Confidential. The confidentiality obligation survives termination of this SOW for a period of three (3) years.</p>
+  </div>
+
+  <!-- 13. DATA OWNERSHIP AND IP -->
+  <div class="section">
+    <div class="section-num">Section 13</div>
+    <h2>Data Ownership and Intellectual Property</h2>
+
+    <div class="ip-block">
+      <h3>Data Ownership</h3>
+      <p>Saffron Realty owns all lead data, conversation transcripts, brochure records, commission records, RERA disclosure logs and audit log entries processed through the Brokerage Command Centre. Saffron Realty retains full access and export rights at any time during the engagement and for 30 days after termination. All Saffron Realty-account logins and passwords for the administrative panel will be handed over to Saffron Realty's nominated team on go-live. Jarvis Daily will not use Saffron Realty data for any purpose other than delivering the services under this SOW.</p>
+    </div>
+
+    <div class="ip-block">
+      <h3>Intellectual Property</h3>
+      <p>The Jarvis Daily Brokerage Command Centre Platform (including its API, source code, system prompts, workflows, agent architectures, and underlying infrastructure) is a pre-existing product owned by Tranquil Veda Private Limited. Under this SOW, Saffron Realty is licensing a configured instance of the Platform for the duration of the engagement, and nothing in this engagement transfers ownership of the Platform to Saffron Realty or constitutes a work-for-hire arrangement under Section 17 of the Copyright Act 1957.</p>
+    </div>
+
+    <div class="ip-block">
+      <h3>Third-Party Service Providers</h3>
+      <p>The service is delivered using reputable third-party providers (AI model provider, WhatsApp Business platform, cloud hosting, e-signature service, lead-source APIs for MagicBricks, 99acres, Housing.com and Meta). Each operates under its own terms and retains records per its own policies and applicable law. Jarvis Daily selects responsible providers but does not warrant third-party conduct or uptime. Jarvis Daily's total liability for sub-processor incidents is capped at fees paid in the preceding three months.</p>
+    </div>
+  </div>
+
+  <!-- 14. SIGNATORIES -->
+  <div class="section">
+    <div class="section-num">Section 14</div>
+    <h2>Signatories</h2>
+    <p>This Statement of Work is executed on behalf of the parties below. Digital signatures executed via WhatsApp-shared PDF or zoho-signed link are accepted as legally valid under the Information Technology Act, 2000.</p>
+
+    <div class="sig-grid">
+      <div class="sig-block">
+        <div class="sig-label">For the Service Provider</div>
+        <div class="sig-name">Shruti</div>
+        <div class="sig-detail">
+          Principal Consultant<br>
+          Jarvis Daily, a unit of<br>
+          Tranquil Veda Private Limited<br>
+          shruti@jarvisdaily.com<br>
+          +91 9673758777<br>
+          GSTIN 27AAHCT6956C1Z3
+        </div>
+        <div class="sig-line">Signature / Date</div>
+      </div>
+      <div class="sig-block">
+        <div class="sig-label">For the Client</div>
+        <div class="sig-name">Rahul Deshmukh</div>
+        <div class="sig-detail">
+          Founder / Principal Broker<br>
+          Saffron Realty Channel Partners Pvt. Ltd.<br>
+          Baner, Pune + Andheri West, Mumbai<br>
+          [Client Email]<br>
+          [Client Phone]
+        </div>
+        <div class="sig-line">Signature / Date</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Tranquil Veda Private Limited - GSTIN 27AAHCT6956C1Z3 - Pune, Maharashtra - hello@jarvisdaily.com<br>
+    This Statement of Work is confidential and prepared exclusively for Saffron Realty Channel Partners.
+  </div>
+
+</div>
+</body>
+</html>
