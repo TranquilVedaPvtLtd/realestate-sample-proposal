@@ -95,7 +95,15 @@
         radial-gradient(ellipse at 20% 75%, rgba(0,200,83,0.14) 0%, transparent 55%),
         linear-gradient(135deg, #060E1A 0%, #0A1628 45%, #152238 100%);
     }
-    #heroSkyline { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.6; }
+    .hero-bg-gradient { opacity: 1; transition: opacity 1.2s ease; }
+    .hero-video-wrap.video-ready .hero-bg-gradient { opacity: 0; }
+    .hero-video-wrap video {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      opacity: 0; transition: opacity 1.2s ease;
+    }
+    .hero-video-wrap.video-ready video { opacity: 1; }
     .hero-video-wrap::after {
       content: ""; position: absolute; inset: 0;
       background: linear-gradient(180deg,
@@ -745,9 +753,9 @@
 
   <!-- ============== BLOCK 1 - HERO ============== -->
   <section class="hero" id="hero" data-section="hero">
-    <div class="hero-video-wrap" aria-hidden="true">
+    <div class="hero-video-wrap" id="heroWrap" aria-hidden="true">
       <div class="hero-bg-gradient"></div>
-      <canvas id="heroSkyline"></canvas>
+      <video muted loop playsinline preload="auto" id="heroVideo"></video>
     </div>
     <div class="container">
       <span class="badge">Prepared for Rahul Deshmukh - Saffron Realty Channel Partners, Pune + Mumbai</span>
@@ -761,101 +769,25 @@
     </div>
     <script>
       (function() {
-        var c = document.getElementById('heroSkyline');
-        if (!c || !c.getContext) return;
-        var ctx = c.getContext('2d');
-        var dpr = Math.max(1, window.devicePixelRatio || 1);
-        var W = 0, H = 0;
-        var buildings = [];
-        var dots = [];
-        var DOT_COUNT = 70;
-        var GOLD = 'rgba(244, 201, 93, ';
-        var GREEN = 'rgba(0, 200, 83, ';
-        var running = true;
-
-        function resize() {
-          var rect = c.getBoundingClientRect();
-          W = rect.width; H = rect.height;
-          c.width = Math.floor(W * dpr);
-          c.height = Math.floor(H * dpr);
-          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-          buildSkyline();
+        var v = document.getElementById('heroVideo');
+        var wrap = document.getElementById('heroWrap');
+        if (!v) return;
+        var DESKTOP = 'assets/hero-desktop.mp4';
+        var MOBILE  = 'assets/hero-mobile.mp4';
+        var mq = window.matchMedia('(max-width: 768px)');
+        function reveal() { if (wrap) wrap.classList.add('video-ready'); }
+        v.addEventListener('playing', reveal, { once: true });
+        v.addEventListener('loadeddata', reveal, { once: true });
+        function setSrc(src) {
+          if (v.currentSrc && v.currentSrc.indexOf(src.split('/').pop()) !== -1) return;
+          v.src = src; v.load();
+          var p = v.play();
+          if (p && typeof p.catch === 'function') p.catch(function(){});
         }
-        function buildSkyline() {
-          buildings = [];
-          var x = 0;
-          var baseY = H * 0.65;
-          while (x < W) {
-            var w = 28 + Math.random() * 56;
-            var h = 60 + Math.random() * (H * 0.28);
-            buildings.push({ x: x, y: baseY + (H * 0.35) - h, w: w, h: h });
-            x += w + 2;
-          }
-        }
-        function makeDot() {
-          var palette = Math.random() < 0.5 ? GOLD : GREEN;
-          return {
-            x: Math.random() * W,
-            y: H + Math.random() * 40,
-            vy: 0.25 + Math.random() * 0.55,
-            r: 1.2 + Math.random() * 1.6,
-            color: palette,
-            trail: []
-          };
-        }
-        for (var i = 0; i < DOT_COUNT; i++) {
-          var d = makeDot();
-          d.y = Math.random() * H;
-          dots.push(d);
-        }
-
-        function draw() {
-          if (!running) return;
-          ctx.clearRect(0, 0, W, H);
-          // skyline
-          for (var i = 0; i < buildings.length; i++) {
-            var b = buildings[i];
-            ctx.fillStyle = 'rgba(255, 215, 0, 0.18)';
-            ctx.fillRect(b.x, b.y, b.w, b.h);
-            // top edge highlight
-            ctx.fillStyle = 'rgba(255, 215, 0, 0.32)';
-            ctx.fillRect(b.x, b.y, b.w, 1);
-          }
-          // dots
-          for (var j = 0; j < dots.length; j++) {
-            var dt = dots[j];
-            dt.trail.push({ x: dt.x, y: dt.y });
-            if (dt.trail.length > 6) dt.trail.shift();
-            for (var t = 0; t < dt.trail.length; t++) {
-              var p = dt.trail[t];
-              var alpha = (t / dt.trail.length) * 0.35;
-              ctx.fillStyle = dt.color + alpha + ')';
-              ctx.beginPath();
-              ctx.arc(p.x, p.y, dt.r * (t / dt.trail.length), 0, Math.PI * 2);
-              ctx.fill();
-            }
-            // head
-            ctx.fillStyle = dt.color + '0.85)';
-            ctx.beginPath();
-            ctx.arc(dt.x, dt.y, dt.r, 0, Math.PI * 2);
-            ctx.fill();
-            dt.y -= dt.vy;
-            if (dt.y < -10) {
-              dt.x = Math.random() * W;
-              dt.y = H + 10;
-              dt.trail = [];
-            }
-          }
-          setTimeout(function() { requestAnimationFrame(draw); }, 33);
-        }
-
-        window.addEventListener('resize', resize);
-        document.addEventListener('visibilitychange', function() {
-          running = !document.hidden;
-          if (running) draw();
-        });
-        resize();
-        draw();
+        setSrc(mq.matches ? MOBILE : DESKTOP);
+        var onChange = function(e) { setSrc(e.matches ? MOBILE : DESKTOP); };
+        if (typeof mq.addEventListener === 'function') mq.addEventListener('change', onChange);
+        else if (typeof mq.addListener === 'function') mq.addListener(onChange);
       })();
     </script>
   </section>
